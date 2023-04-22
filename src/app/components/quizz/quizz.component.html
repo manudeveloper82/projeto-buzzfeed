@@ -31,8 +31,7 @@
     ">
       <h3>{{questionSelected.question}}</h3>
   </div>
-  <ng-container *ngFor="let option of questionSelected.options; let i = index  "
-   >
+  <ng-container *ngFor="let option of questionSelected.options; let i = index">
     <div *ngIf=!finished class="
      bg-red-400 flex flex-row
      border
@@ -44,8 +43,7 @@
       hover:bg-green-600
       ">
       <button class="btn-option "
-        (click)="playerChoose(option.alias)"
-        >
+        (click)="playerChoose(option.alias)">
         {{option.name}}
       </button>
     </div>
