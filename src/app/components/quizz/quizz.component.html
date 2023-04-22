@@ -31,25 +31,25 @@
     ">
       <h3>{{questionSelected.question}}</h3>
   </div>
-
-
-  <div *ngIf=!finished class="
-      border
-      border-green-600
-      px-6 py-3
-      mt-8
-      md:px-36
+  <ng-container *ngFor="let option of questionSelected.options; let i = index  "
+   >
+    <div *ngIf=!finished class="
+     bg-red-400 flex flex-row
+     border
+     border-green-600
+      px-6 py-2
+      mt-2
       rounded-md
       md:text-xl
       hover:bg-green-600
-      " >
-      <button *ngFor="let option of questionSelected.options; let i = index"
+      ">
+      <button class="btn-option "
         (click)="playerChoose(option.alias)"
-        class="btn-option"
         >
         {{option.name}}
       </button>
-  </div>
+    </div>
+  </ng-container>
 
 
   <div *ngIf=finished class="
