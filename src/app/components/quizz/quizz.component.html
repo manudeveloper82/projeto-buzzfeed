@@ -25,11 +25,11 @@
   <div *ngIf=!finished class="
     bg-purple-700
     rounded-md
-    px-24 py-12
+    px-4 py-12
     md:px-64
     md:text-xl
     ">
-      <h3>{{questionSelected.question}}</h3>
+      <h3 class="font-bold">{{questionSelected.question}}</h3>
   </div>
   <ng-container *ngFor="let option of questionSelected.options; let i = index">
     <div *ngIf=!finished class="
@@ -54,18 +54,17 @@
       flex
       justify-center
       flex-col
-      bg-blue-950
+      bg-purple-700
       rounded-md
-      px-24 py-24
+      px-12 py-24
       mt-8
-      md:px-64"
+      md:px-32"
       >
       <h1 class="
       text-base
-      md:text-xl
-      font-bold">
+      md:text-xl">
       O seu resultado é:</h1>
-      <p  class="text-sm md:text-base">{{answerSelected}}</p>
+      <p  class="text-md font-bold md:text-base">{{answerSelected}}</p>
   </div>
 
 
